@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/CadastraLivros.js"></script>
     <script>
-        function iniciar(){
+        function iniciar() {
             let div = document.createElement("div")
             let Livros = new cadastraLivros(div);
             document.body.appendChild(div)
 
+
+
+
+
+            //CSS
+            div.style = "margin-left:25%; " +
+                        "margin-top:10%; " +
+                        "margin-right:25%; " +
+                        "padding-bottom: 15%;" +
+                        "background-color: yellow"
+
+            document.body.style = "background-color:blue; "
         }
-        window.addEventListener("load",iniciar)
+        /*
+         * Todos os campos obrigatórios, exceto dataMorte
+     * pontuação do autor deve ser média da pontuação dos livroes
+     * dataLancamento deve ser maior que a data de nascimento 
+     * Gênero deve ser: Conto, Novela, Romance, Epopeia, Teatro épico, Poesia lírica, Elegia, Ode, Comédia, Tragédia, Tragicomédia, Farsa,Erótica, Fantasia, Ficção científica, Melodrama, Nonsense Suspense ou Terror
+      * Não pode existir livros com o mesmo nome e dataLancamento
+        */
+
+        window.addEventListener("load", iniciar)
     </script>
 </head>
+
 <body>
 </body>
+
 </html>

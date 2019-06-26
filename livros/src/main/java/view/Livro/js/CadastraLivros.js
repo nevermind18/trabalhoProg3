@@ -1,9 +1,12 @@
 class cadastraLivros {
     constructor(corpo) {
 
+        //outros
+        var div = document.createElement("div")
+        var div2 = document.createElement("div")
         var espaco = document.createElement("br")
-        
 
+        //inputs
         var inputNome = document.createElement("input")
         inputNome.placeholder = "Nome"
 
@@ -32,21 +35,39 @@ class cadastraLivros {
         inputNota.placeholder = "De uma nota? (0-10)"
         inputQuantidadePaginas.type = "number"
 
-        var inputDataNasc = document.createElement("input")
-        inputDataNasc.placeholder = "Data de Nascimento"
-        let labelDataNasc = document.createElement("label")
-        labelDataNasc.innerText = "Data do lancamento"
+        var inputLancamento = document.createElement("input")
+        inputLancamento.type = "date"
+        inputLancamento.placeholder = "Data de Nascimento"
+        let labelLancamento = document.createElement("label")
+        labelLancamento.innerText = "Data do lancamento"
 
-        corpo.appendChild(inputNome)
-        corpo.appendChild(espaco)
-        corpo.appendChild(inputidiomaOriginal)
-        corpo.appendChild(espaco.cloneNode())
-        corpo.appendChild(inputCategoria)
-        corpo.appendChild(inputquaercoisaome)
-        corpo.appendChild(labelDataNasc)
-        corpo.appendChild(inputDataNasc)
-        corpo.appendChild(inputNota)
-        corpo.appendChild(inputQuantidadePaginas)
+        //appends
 
+        div.appendChild(inputNome)
+        div.appendChild(espaco)
+        div.appendChild(espaco.cloneNode())
+        div.appendChild(espaco.cloneNode())
+        div.appendChild(inputidiomaOriginal)
+        div.appendChild(espaco.cloneNode())
+        div.appendChild(espaco.cloneNode())
+        div.appendChild(inputCategoria)
+        div2.appendChild(inputNota)
+        div2.appendChild(inputQuantidadePaginas)
+        div2.appendChild(inputquaercoisaome)
+        div2.appendChild(labelLancamento)
+        div2.appendChild(inputLancamento)
+        corpo.appendChild(div)
+        corpo.appendChild(div2)
+
+
+
+        //css
+        div.style = "background-color:black;" +
+            "padding-left: 75%;"
+
+        div2.style = "padding-left: 75%;" +
+            "padding-bottom: 5%;"
+
+        
     }
 }
